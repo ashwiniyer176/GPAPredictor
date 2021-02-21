@@ -7,6 +7,7 @@ class GPAPredictor:
     subjectDetails = defaultdict(list)
     subjectNames = []
 
+    #Add marks out of 100
     def getSubjectDetails(self, numberOfSubjects):
         for subject in range(numberOfSubjects):
             subjectName = input("Enter subject name:")
@@ -34,8 +35,8 @@ class GPAPredictor:
             self.subjectDetails[subjectName][0] = numberOfCredits*theoryMarks
 
         elif(labMarks != 0 and theoryMarks != 0 and projectMarks == 0):
-            self.subjectDetails[subjectName][0] = theoryMarks*2
-            self.subjectDetails[subjectName][1] = labMarks*2
+            self.subjectDetails[subjectName][0] = theoryMarks*3
+            self.subjectDetails[subjectName][1] = labMarks*1
 
         elif(labMarks != 0 and theoryMarks != 0 and projectMarks != 0):
             self.subjectDetails[subjectName][0] = theoryMarks*2
